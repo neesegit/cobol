@@ -4,21 +4,29 @@
        
        data division.
        working-storage section.
-       01  SOLDE pic s9(4).
-       01  TRUC pic s9(4).
+       01  SOLDE pic s9(8).
+       01  TRUC pic s9(8).
+       01  DEC pic s9(2)V9(2).
 
 
        procedure division.
-           move +1698 to SOLDE.
+           move +16982345 to SOLDE.
            display SOLDE.
-           move -2345 to TRUC.
+           move -23452345 to TRUC.
            display TRUC.
            add TRUC to SOLDE.
            if SOLDE <= 0 then
-              display "test"
+               display SOLDE
            else
                display SOLDE
-
            end-if
+
+
+      *     display "Entrez votre nombre decimal : ".
+
+      *     accept DEC.
+
+      *     display "Votre nombre est " DEC.
+
 
            stop run.
